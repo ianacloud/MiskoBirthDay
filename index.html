@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Narodeninový Quest pre Šmakitózu</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <div id="photo-collage" class="collage-bg"></div>
+    <div class="quiz-container" id="quiz-container">
+        <div id="intro">
+            <h1>Všetko najlepšie k 33. narodeninám, Mišiačik! 🎂</h1>
+            <p>12. 5. 2026 je tvoj deň. Pripravila som si pre teba malý quest. Tvoje odpovede rozhodnú o tvojom darčeku. Rozhoduj sa premyslene.</p>
+            <button onclick="startQuiz()">Spustiť Quest</button>
+        </div>
+        
+        <div id="question-box" class="hidden">
+            <div class="progress">Otázka <span id="current-number">1</span> z 5</div>
+            <h2 id="question-text">Tu bude otázka</h2>
+            <div class="options">
+                <button class="option-btn" id="btnA" onclick="handleAnswer('A')"></button>
+                <button class="option-btn" id="btnB" onclick="handleAnswer('B')"></button>
+            </div>
+        </div>
+
+        <div id="result-container" class="hidden">
+            <h2 id="result-title">Quest dokončený! 🏆</h2>
+            
+            <img id="prize-img" src="" alt="Tvoja výhra" class="prize-image">
+            
+            <p id="result-desc"></p>
+            
+            <div class="booking-section">
+                <p>To vyzerá skvele, však? Možeme si rezervovať zážitok ešte dnes:</p>
+                <a id="booking-link" href="#" target="_blank" class="booking-button">Zarezervovať aktivitu</a>
+            </div>
+
+            <button class="restart-btn" onclick="location.reload()" style="margin-top: 20px; background: #795548;">Skúsiť znova</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
