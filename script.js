@@ -123,7 +123,7 @@ function generateCollage() {
 
     usedNumbers.forEach(num => {
         const img = document.createElement('img');
-        img.src = `foto/${num}.jpeg`; 
+        img.src = `foto/${num}.webp`; 
 
         // Náhodne priradíme veľkosť niektorým fotkám
         const rand = Math.random();
